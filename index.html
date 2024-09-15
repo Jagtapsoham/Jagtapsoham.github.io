@@ -28,7 +28,6 @@
     }
 
     h1, h2 {
-      color: #00f;
       text-align: center;
     }
 
@@ -39,15 +38,19 @@
 
     .profile-header img {
       border-radius: 50%;
-      border: 5px solid #00f;
+      border: 5px solid #15acca;
       width: 150px;
       height: 150px;
+    }
+
+    .profile-header h1 {
+      color: #09093b;
     }
 
     .section {
       margin-bottom: 30px;
       padding: 20px;
-      border: 2px solid #00f;
+      border: 2px solid #15acca;
       border-radius: 15px;
       background-color: #1e1e1e;
       transition: transform 0.3s, background-color 0.3s;
@@ -56,6 +59,10 @@
     .section:hover {
       transform: scale(1.02);
       background-color: #2e2e2e;
+    }
+
+    .section-margin {
+      margin-top: 50px;
     }
 
     ul {
@@ -71,11 +78,11 @@
     }
 
     ul li strong {
-      color: #00f;
+      color: #15acca;
     }
 
     a {
-      color: #00f;
+      color: #15acca;
       text-decoration: none;
     }
 
@@ -87,8 +94,9 @@
       text-align: center;
       padding: 20px;
       background-color: #000;
-      border-top: 2px solid #00f;
+      border-top: 2px solid #15acca;
       color: #fff;
+      margin-top: 50px;
     }
 
     /* Responsive Design */
@@ -116,7 +124,7 @@
 
     <hr>
 
-    <div class="section">
+    <div class="section section-margin">
       <h2>🌟 Current Project</h2>
       <p>Developing a risk-data analysis platform for CITI, that ingests and processes metrics from multiple risk pillars. Utilizing Java, Spring Boot, and Kafka for data transformation and persistence, along with Oracle Database for storage. Focused on scalable and efficient data handling.</p>
     </div>
@@ -153,7 +161,7 @@
     <div class="section">
       <h2>🧩 Fun Fact & Hobbies</h2>
       <ul>
-        <li><strong>Passionate About Learning:</strong> I'm a Passionate Java developer with a drive to create impactful software.</li>
+        <li><strong>Passionate About Learning:</strong> I'm a passionate Java developer with a drive to create impactful software.</li>
         <li><strong>Flutter Fun:</strong> Developed a Flutter app in just 5 days for fun!</li>
       </ul>
     </div>
