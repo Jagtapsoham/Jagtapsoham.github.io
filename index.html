@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soham Jagtap | Java Developer</title>
+  <title>Soham Jagtap's Portfolio</title>
   <style>
-    /* Reset default margins and paddings */
+    /* Reset some default browser styling */
     * {
       margin: 0;
       padding: 0;
@@ -14,195 +13,168 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #101010;
-      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
       line-height: 1.6;
-      padding: 20px;
     }
 
     .container {
-      width: 90%;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
+      padding: 20px;
       background-color: #205468;
-      padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
-    .profile-image {
+    h1, h2 {
+      color: #00f;
+      text-align: center;
+    }
+
+    .profile-header {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .profile-header img {
+      border-radius: 50%;
+      border: 5px solid #00f;
       width: 150px;
       height: 150px;
-      border-radius: 50%;
-      border: 5px solid #00fffb;
-      margin: 0 auto;
-      display: block;
-    }
-
-    h1,
-    h2 {
-      text-align: center;
-      color: #00fffb;
-      font-weight: 700;
-    }
-
-    h1 {
-      margin-top: 20px;
-    }
-
-    .intro {
-      text-align: center;
-      margin: 20px 0;
     }
 
     .section {
-      background-color: #202020;
-      margin: 20px 0;
+      margin-bottom: 30px;
       padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #00fffb;
-      transition: all 0.3s ease;
+      border: 2px solid #00f;
+      border-radius: 15px;
+      background-color: #1e1e1e;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     .section:hover {
-      background-color: #2a2a2a;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      transform: scale(1.02);
+      background-color: #2e2e2e;
     }
 
-    .section-title {
-      color: #00fffb;
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-
-    .section p {
-      margin: 10px 0;
-    }
-
-    .skills-list,
-    .projects-list {
+    ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
 
-    .skills-list li,
-    .projects-list li {
-      background-color: #333;
+    ul li {
       padding: 10px;
+      background-color: #222;
       margin-bottom: 10px;
-      border-radius: 5px;
-      border-left: 4px solid #00fffb;
+      border-radius: 10px;
+    }
+
+    ul li strong {
+      color: #00f;
     }
 
     a {
-      color: #00fffb;
+      color: #00f;
       text-decoration: none;
     }
 
     a:hover {
-      color: #00c2a6;
       text-decoration: underline;
     }
 
-    .contact {
+    footer {
       text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 2px solid #00f;
+      color: #fff;
     }
 
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      font-size: 1.2em;
+    /* Responsive Design */
+    @media(max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      .profile-header img {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
-
 <body>
+
   <div class="container">
-    <img class="profile-image" src="https://github.com/Jagtapsoham/profile_photo/blob/main/Circle-Profile.jpg?raw=true"
-      alt="Soham Jagtap Profile Picture">
 
-    <h1>Hello, I'm Soham Jagtap 👋</h1>
+    <div class="profile-header">
+      <img src="https://github.com/Jagtapsoham/profile_photo/blob/main/Circle-Profile.jpg?raw=true" alt="Profile Image">
+      <h1>Hello, I'm Soham Jagtap 👋</h1>
+      <p>Versatile Java Software Developer with 5 years of experience across multiple domains, including finance, credit management, logistics & transportation, and data aggregation. Skilled in building scalable microservices, optimizing backend systems, and integrating cloud-native solutions.</p>
+    </div>
 
-    <div class="intro">
-      <p>Versatile Java Software Developer with 5 years of experience across multiple domains, including finance,
-        credit management, logistics & transportation, and data aggregation. Skilled in building scalable microservices,
-        optimizing backend systems, and integrating cloud-native solutions. Focused on delivering clean, efficient code
-        and solving complex problems in diverse business environments.</p>
+    <hr>
+
+    <div class="section">
+      <h2>🌟 Current Project</h2>
+      <p>Developing a risk-data analysis platform for CITI, that ingests and processes metrics from multiple risk pillars. Utilizing Java, Spring Boot, and Kafka for data transformation and persistence, along with Oracle Database for storage. Focused on scalable and efficient data handling.</p>
     </div>
 
     <div class="section">
-      <h2 class="section-title">🌟 Current Project</h2>
-      <p>Developing a risk-data analysis platform for CITI, that ingests and processes metrics from multiple risk pillars. Utilizing
-        Java, Spring Boot, and Kafka for data transformation and persistence, along with Oracle Database for storage. The
-        platform automates ingestion through email-inbox and Kafka listeners and integrates Jenkins/Lightspeed for CI/CD.
-        Focused on scalable and efficient data handling.</p>
-    </div>
-
-    <div class="section">
-      <h2 class="section-title">🚀 Skills & Tech Stack</h2>
-      <ul class="skills-list">
-        <li><strong>Languages</strong>: Java, JavaScript, HTML5, CSS3, Flutter</li>
-        <li><strong>Frameworks</strong>: Spring Boot, Spring Data JPA, JUnit, Mockito, Hibernate, J2EE, Bootstrap, Flask
-        </li>
-        <li><strong>Database</strong>: MySQL, MS SQL, PostgreSQL, Oracle DB</li>
-        <li><strong>Build Tools</strong>: Maven</li>
-        <li><strong>IDEs</strong>: IntelliJ, Eclipse, Android Studio</li>
-        <li><strong>Version Control</strong>: GitHub, BitBucket</li>
-        <li><strong>Testing Tools</strong>: Postman, JMeter</li>
-        <li><strong>CI/CD</strong>: GitHub Actions, Jenkins</li>
-        <li><strong>Cloud Platforms</strong>: AWS</li>
-        <li><strong>Containerization</strong>: Docker</li>
-        <li><strong>Monitoring Tools</strong>: Datadog, OpenShift</li>
-        <li><strong>Dev Environments</strong>: Emulators, Windows, Linux, macOS</li>
+      <h2>🚀 Skills & Tech Stack</h2>
+      <ul>
+        <li><strong>Languages:</strong> Java, JavaScript, HTML5, CSS3, Flutter</li>
+        <li><strong>Frameworks:</strong> Spring Boot, Spring Data JPA, JUnit, Mockito, Hibernate, J2EE, Bootstrap, Flask</li>
+        <li><strong>Databases:</strong> MySQL, MS SQL, PostgreSQL, Oracle DB</li>
+        <li><strong>Build Tools:</strong> Maven</li>
+        <li><strong>IDEs:</strong> IntelliJ, Eclipse, Android Studio</li>
+        <li><strong>Version Control:</strong> GitHub, BitBucket</li>
+        <li><strong>Testing Tools:</strong> Postman, JMeter</li>
+        <li><strong>CI/CD:</strong> GitHub Actions, Jenkins</li>
+        <li><strong>Cloud Platforms:</strong> AWS</li>
+        <li><strong>Containerization:</strong> Docker</li>
+        <li><strong>Monitoring Tools:</strong> Datadog, OpenShift</li>
+        <li><strong>Dev Environments:</strong> Emulators, Windows, Linux, macOS</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2 class="section-title">🛠️ Currently Learning</h2>
+      <h2>🛠️ Currently Learning</h2>
       <p>AWS DevOps and Shell Scripting</p>
     </div>
 
     <div class="section">
-      <h2 class="section-title">📚 Previous Projects</h2>
-      <ul class="projects-list">
-        <li><strong>SOLO</strong>: An app designed to simplify business finances for self-employed individuals,
-          professionals, independent contractors, and freelancers. Features include sending payment requests, issuing
-          virtual and physical cards, and making transactions without customer sign-up.</li>
-        <li><strong>Arkonn</strong>: A web crawling technology that stores data from online vehicle market portals and
-          uploads data files to client servers. Utilizes multithreading where each thread is responsible for a website's
-          crawling logic.</li>
-        <li><strong>Genuine Tracking Systems (GT)</strong>: An IoT-based vehicle tracking system for tracking school buses
-          in Canada. Includes report generation, platform view design, and implementation of Google Maps API. Involved in
-          developing port listeners following TCP and UDP protocols for vehicle trackers.</li>
-        <li><strong>iTrack</strong>: An IoT-based vehicle tracking system for tracking all types of vehicles in Canada.
-          Features include report generation, maintenance scheduling, automated reporting, and alerts. Extensively used
-          Google Maps API for UI rendering.</li>
-        <li><strong>DisputeFox</strong>: A CRM for credit repair systems in Canada, offering functionalities for credit
-          score repair, affiliate and client management. Focused on managing client and affiliate data efficiently.</li>
-        <li><strong>AffiliateFox</strong>: An affiliate marketing portal developed with features for setting up custom
-          domains, sub-domains, and adding theme features for clients and affiliates.</li>
-      </ul>
+      <h2>📫 Contact Me</h2>
+      <p><strong>Email:</strong> <a href="mailto:jagtapsoham2310@gmail.com">jagtapsoham2310@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sohamjagtap-profile/">sohamjagtap-profile</a></p>
     </div>
 
     <div class="section">
-      <h2 class="section-title">📫 Contact Me</h2>
-      <div class="contact">
-        <a href="mailto:jagtapsoham2310@gmail.com">Email: jagtapsoham2310@gmail.com</a>
-        <a href="https://www.linkedin.com/in/sohamjagtap-profile/">LinkedIn: sohamjagtap-profile</a>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2 class="section-title">🧩 Fun Fact & Hobbies</h2>
+      <h2>🧩 Fun Fact & Hobbies</h2>
       <ul>
-        <li><strong>Passionate About Learning</strong>: Passionate Java developer with a drive to create impactful
-          software. Enthusiastic about working with dedicated teams to build innovative solutions.</li>
-        <li><strong>Flutter Fun</strong>: Developed a Flutter app in just 5 days for fun—proving that coding can be both a
-          hobby and a passion!</li>
+        <li><strong>Passionate About Learning:</strong> I'm a Passionate Java developer with a drive to create impactful software.</li>
+        <li><strong>Flutter Fun:</strong> Developed a Flutter app in just 5 days for fun!</li>
       </ul>
     </div>
-  </div>
-</body>
 
+    <div class="section">
+      <h2>📚 Previous Projects</h2>
+      <ul>
+        <li><strong>SOLO:</strong> An app designed to simplify business finances for self-employed individuals, professionals, independent contractors, and freelancers.</li>
+        <li><strong>Arkonn:</strong> Web crawling technology to gather data from online vehicle markets and upload files to client servers.</li>
+        <li><strong>Genuine Tracking Systems (GT):</strong> An IoT-based vehicle tracking system for school buses in Canada, implementing Google Maps API for UI.</li>
+        <li><strong>iTrack:</strong> An IoT-based vehicle tracking system for all types of vehicles in Canada with reporting and scheduling features.</li>
+        <li><strong>DisputeFox:</strong> A CRM for credit repair systems in Canada focused on client and affiliate management.</li>
+        <li><strong>AffiliateFox:</strong> An affiliate marketing portal with custom domain setups and themes for clients and affiliates.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Soham Jagtap. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
