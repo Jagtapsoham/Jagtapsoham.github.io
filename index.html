@@ -1,188 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soham Jagtap's Portfolio</title>
-  <style>
-    /* Reset some default browser styling */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-      background-color: #205468;
-      border-radius: 15px;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    .profile-header {
-      text-align: center;
-      padding: 50px 0;
-    }
-
-    .profile-header img {
-      border-radius: 50%;
-      border: 5px solid #15acca;
-      width: 150px;
-      height: 150px;
-    }
-
-    .profile-header h1 {
-      color: #09093b;
-    }
-
-    .section {
-      margin-bottom: 30px;
-      padding: 20px;
-      border: 2px solid #15acca;
-      border-radius: 15px;
-      background-color: #1e1e1e;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .section:hover {
-      transform: scale(1.02);
-      background-color: #2e2e2e;
-    }
-
-    .section-margin {
-      margin-top: 50px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      padding: 10px;
-      background-color: #222;
-      margin-bottom: 10px;
-      border-radius: 10px;
-    }
-
-    ul li strong {
-      color: #15acca;
-    }
-
-    a {
-      color: #15acca;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-      border-top: 2px solid #15acca;
-      color: #fff;
-      margin-top: 50px;
-    }
-
-    /* Responsive Design */
-    @media(max-width: 768px) {
-      .container {
-        padding: 10px;
-      }
-
-      .profile-header img {
-        width: 100px;
-        height: 100px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soham Jagtap | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Poppins,sans-serif;
+background:#0f1720;
+color:#eef2f7;
+overflow-x:hidden;
+}
+#particles{
+position:fixed;inset:0;z-index:-2;
+background:radial-gradient(circle at top,#205468,#0f1720 60%);
+}
+.glow{
+position:fixed;top:-150px;left:50%;transform:translateX(-50%);
+width:700px;height:300px;border-radius:50%;
+background:rgba(21,172,202,.15);filter:blur(90px);z-index:-1;
+}
+.container{max-width:1200px;margin:auto;padding:20px}
+.hero{text-align:center;padding:60px 20px}
+.profile{
+width:150px;height:150px;border-radius:50%;
+border:3px solid #15acca;
+box-shadow:0 0 30px rgba(21,172,202,.4);
+}
+h1{
+font-size:3rem;
+margin:20px 0 10px;
+background:linear-gradient(90deg,#fff,#15acca);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.typing{color:#15acca;font-weight:600;min-height:30px}
+.bio{max-width:900px;margin:20px auto}
+.stats{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;margin-top:30px;
+}
+.stat,.card{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(12px);
+border:1px solid rgba(21,172,202,.25);
+border-radius:20px;
+padding:20px;
+transition:.3s;
+}
+.stat:hover,.card:hover{transform:translateY(-6px)}
+.section{margin-top:35px}
+.section h2{
+text-align:center;
+margin-bottom:20px;
+color:#15acca;
+letter-spacing:1px;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{
+padding:10px 15px;border-radius:999px;
+background:rgba(21,172,202,.15);
+border:1px solid rgba(21,172,202,.4);
+}
+.project-title{color:#15acca;font-weight:700;margin-bottom:10px}
+a{color:#15acca}
+footer{text-align:center;padding:30px;margin-top:40px;color:#9fb8c5}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.show{opacity:1;transform:none}
+</style>
 </head>
 <body>
+<canvas id="particles"></canvas>
+<div class="glow"></div>
 
-  <div class="container">
+<div class="container">
+<section class="hero">
+<img class="profile" src="https://github.com/Jagtapsoham/profile_photo/blob/main/Circle-Profile.jpg?raw=true" alt="Soham">
+<h1>Soham Jagtap</h1>
+<div class="typing" id="typing"></div>
+<p class="bio">
+Versatile Java Software Developer with 6+ years of experience across finance, wealth management,
+credit management, logistics & transportation, and data aggregation. Skilled in building scalable
+microservices, optimizing backend systems, and integrating cloud-native solutions.
+</p>
 
-    <div class="profile-header">
-      <img src="https://github.com/Jagtapsoham/profile_photo/blob/main/Circle-Profile.jpg?raw=true" alt="Profile Image">
-      <h1>Hello, I'm Soham Jagtap 👋</h1>
-      <p>Versatile Java Software Developer with 5 years of experience across multiple domains, including finance, credit management, logistics & transportation, and data aggregation. Skilled in building scalable microservices, optimizing backend systems, and integrating cloud-native solutions.</p>
-    </div>
+<div class="stats">
+<div class="stat"><h3>6+</h3><p>Years Experience</p></div>
+<div class="stat"><h3>8+</h3><p>Enterprise Projects</p></div>
+<div class="stat"><h3>4</h3><p>Industry Domains</p></div>
+<div class="stat"><h3>Java 17</h3><p>Primary Stack</p></div>
+</div>
+</section>
 
-    <hr>
+<section class="section reveal">
+<h2>🌟 Current Project</h2>
+<div class="card">
+<p>
+Currently contributing to enterprise-scale wealth management platforms for a leading global financial institution through Accenture.
+Designing and developing high-performance backend microservices using Java 17 and Spring Boot 3.5 that power content delivery for mobile banking experiences.
+Working with globally distributed Azure deployments, caching strategies, and lightweight service architectures to optimize responsiveness and scalability.
+<br><br>
+Additionally developing notification services and an internal feature-management platform using React, Spring Boot and Java that enables operational teams to manage feature flags and business configurations efficiently.
+</p>
+</div>
+</section>
 
-    <div class="section section-margin">
-      <h2>🌟 Current Project</h2>
-      <p>Developing a risk-data analysis platform for CITI, that ingests and processes metrics from multiple risk pillars. Utilizing Java, Spring Boot, and Kafka for data transformation and persistence, along with Oracle Database for storage. Focused on scalable and efficient data handling.</p>
-    </div>
+<section class="section reveal">
+<h2>🚀 Skills & Technologies</h2>
+<div class="chips">
+<span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">React</span>
+<span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">Kafka</span>
+<span class="chip">Docker</span><span class="chip">Oracle</span><span class="chip">PostgreSQL</span>
+<span class="chip">MySQL</span><span class="chip">Jenkins</span><span class="chip">GitHub</span>
+<span class="chip">Bitbucket</span><span class="chip">JUnit</span><span class="chip">Mockito</span>
+<span class="chip">Flutter</span><span class="chip">Datadog</span>
+</div>
+</section>
 
-    <div class="section">
-      <h2>🚀 Skills & Tech Stack</h2>
-      <ul>
-        <li><strong>Languages:</strong> Java, JavaScript, HTML5, CSS3, Flutter</li>
-        <li><strong>Frameworks:</strong> Spring Boot, Spring Data JPA, JUnit, Mockito, Hibernate, J2EE, Bootstrap, Flask</li>
-        <li><strong>Databases:</strong> MySQL, MS SQL, PostgreSQL, Oracle DB</li>
-        <li><strong>Build Tools:</strong> Maven</li>
-        <li><strong>IDEs:</strong> IntelliJ, Eclipse, Android Studio</li>
-        <li><strong>Version Control:</strong> GitHub, BitBucket</li>
-        <li><strong>Testing Tools:</strong> Postman, JMeter</li>
-        <li><strong>CI/CD:</strong> GitHub Actions, Jenkins</li>
-        <li><strong>Cloud Platforms:</strong> AWS</li>
-        <li><strong>Containerization:</strong> Docker</li>
-        <li><strong>Monitoring Tools:</strong> Datadog, OpenShift</li>
-        <li><strong>Dev Environments:</strong> Emulators, Windows, Linux, macOS</li>
-      </ul>
-    </div>
-<!-- 
-    <div class="section">
-      <h2>🛠️ Currently Learning</h2>
-      <p>AWS DevOps and Shell Scripting</p>
-    </div> -->
+<section class="section reveal">
+<h2>🏆 Professional Highlights</h2>
+<div class="grid">
+<div class="card">Cloud-Native Microservices</div>
+<div class="card">Distributed Systems</div>
+<div class="card">Event Driven Architecture</div>
+<div class="card">High Performance APIs</div>
+<div class="card">CI/CD Automation</div>
+<div class="card">Backend Optimization</div>
+</div>
+</section>
 
-    <div class="section">
-      <h2>📫 Contact Me</h2>
-      <p><strong>Email:</strong> <a href="mailto:jagtapsoham2310@gmail.com">jagtapsoham2310@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sohamjagtap-profile/">sohamjagtap-profile</a></p>
-    </div>
+<section class="section reveal">
+<h2>📚 Previous Projects</h2>
+<div class="grid">
+<div class="card"><div class="project-title">Global Investment Banking Platform</div>Risk data ingestion, Kafka processing, Oracle persistence and automated pipelines.</div>
+<div class="card"><div class="project-title">SOLO</div>FinTech platform for freelancers with payments and card management.</div>
+<div class="card"><div class="project-title">Arkonn</div>Multithreaded vehicle-market data aggregation platform.</div>
+<div class="card"><div class="project-title">GT & iTrack</div>IoT vehicle tracking platforms using GPS, Maps and TCP/UDP integrations.</div>
+<div class="card"><div class="project-title">DisputeFox</div>Credit repair CRM and affiliate management platform.</div>
+<div class="card"><div class="project-title">AffiliateFox</div>White-label affiliate marketing and custom-domain platform.</div>
+</div>
+</section>
 
-    <div class="section">
-      <h2>🧩 Fun Fact & Hobbies</h2>
-      <ul>
-        <li><strong>Passionate About Learning:</strong> I'm a passionate Java developer with a drive to create impactful software.</li>
-        <li><strong>Flutter Fun:</strong> Developed a Flutter app in just 5 days for fun!</li>
-      </ul>
-    </div>
+<section class="section reveal">
+<h2>📫 Contact</h2>
+<div class="card">
+<p>Email: <a href="mailto:jagtapsoham2310@gmail.com">jagtapsoham2310@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/sohamjagtap-profile/">sohamjagtap-profile</a></p>
+</div>
+</section>
 
-    <div class="section">
-      <h2>📚 Previous Projects</h2>
-      <ul>
-        <li><strong>SOLO:</strong> An app designed to simplify business finances for self-employed individuals, professionals, independent contractors, and freelancers.</li>
-        <li><strong>Arkonn:</strong> Web crawling technology to gather data from online vehicle markets and upload files to client servers.</li>
-        <li><strong>Genuine Tracking Systems (GT):</strong> An IoT-based vehicle tracking system for school buses in Canada, implementing Google Maps API for UI.</li>
-        <li><strong>iTrack:</strong> An IoT-based vehicle tracking system for all types of vehicles in Canada with reporting and scheduling features.</li>
-        <li><strong>DisputeFox:</strong> A CRM for credit repair systems in Canada focused on client and affiliate management.</li>
-        <li><strong>AffiliateFox:</strong> An affiliate marketing portal with custom domain setups and themes for clients and affiliates.</li>
-      </ul>
-    </div>
+<footer>
+© 2026 Soham Jagtap • Built with HTML, CSS & JavaScript
+</footer>
+</div>
 
-  </div>
+<script>
+const roles=["Java Developer","Spring Boot Engineer","Cloud-Native Builder","Microservices Enthusiast"];
+let i=0,j=0,del=false;
+const el=document.getElementById('typing');
+setInterval(()=>{
+let t=roles[i];
+el.textContent=t.substring(0,j);
+if(!del){j++; if(j>t.length){del=true;setTimeout(()=>{},800);}}
+else{j--; if(j===0){del=false;i=(i+1)%roles.length;}}
+},120);
 
-  <footer>
-    <p>&copy; 2024 Soham Jagtap. All rights reserved.</p>
-  </footer>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
+});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
 
+const c=document.getElementById('particles');
+const ctx=c.getContext('2d');
+function resize(){c.width=innerWidth;c.height=innerHeight}
+resize(); addEventListener('resize',resize);
+let pts=[...Array(60)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5}));
+function draw(){
+ctx.clearRect(0,0,c.width,c.height);
+ctx.fillStyle='rgba(21,172,202,.6)';
+pts.forEach(p=>{
+p.x+=p.vx;p.y+=p.vy;
+if(p.x<0||p.x>c.width)p.vx*=-1;
+if(p.y<0||p.y>c.height)p.vy*=-1;
+ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill();
+});
+requestAnimationFrame(draw);
+}
+draw();
+</script>
 </body>
 </html>
